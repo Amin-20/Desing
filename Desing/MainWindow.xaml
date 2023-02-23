@@ -1,0 +1,491 @@
+﻿<Window x:Class="Desing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Desing"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="722" Width="1253" 
+        MaxHeight="722" MaxWidth="1253">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="25" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Canvas>
+
+        <Rectangle 
+                Width="547" 
+                Height="100"  
+                Canvas.Left="-28" 
+                Canvas.Bottom="-100"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="690" HorizontalAlignment="Left" VerticalAlignment="Center"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#741458" Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle 
+                Width="635" 
+                Height="106"  
+                Canvas.Left="-60" 
+                Canvas.Bottom="-100"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="619" HorizontalAlignment="Left" VerticalAlignment="Center"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#CD0894" Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle 
+                Width="433" 
+                Height="106"  
+                Canvas.Left="86" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="692" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#D43AA8" Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle 
+                Width="525" 
+                Height="100"  
+                Canvas.Left="-95" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="560" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#D43AA8" Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle 
+                Width="349" 
+                Height="106"  
+                Canvas.Left="-33" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="676" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF00F3" Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle 
+                Width="86" 
+                Height="84"  
+                Canvas.Left="-47" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="284" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#950B8E " Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle 
+                Width="209" 
+                Height="104"  
+                Canvas.Left="-29" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="339" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#834581 " Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle 
+                Width="250" 
+                Height="107"  
+                Canvas.Left="-73" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="427" HorizontalAlignment="Center" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF00F3 " Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+        <Rectangle 
+                Width="81" 
+                Height="107"  
+                Canvas.Left="-46" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="119" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#D20F8E  " Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle 
+                Width="258" 
+                Height="97"  
+                Canvas.Left="-87" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="243" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF00F3 " Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle 
+                Width="247" 
+                Height="97"  
+                Canvas.Left="299" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="704" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#D6157B"  Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+        <Rectangle 
+                Width="320" 
+                Height="97"  
+                Canvas.Left="137" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="732" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF00F3 " Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+        <Rectangle 
+                Width="309" 
+                Height="106"  
+                Canvas.Left="379" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="714" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF00B2  " Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle 
+                Width="119" 
+                Height="106"  
+                Canvas.Left="511" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="693" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#E317D3" Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle 
+                Width="160" 
+                Height="106"  
+                Canvas.Left="389" 
+                Canvas.Bottom="-900"
+                RadiusX="50"
+                RadiusY="50" Canvas.Top="734" HorizontalAlignment="Left" VerticalAlignment="Top"
+                >
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="320"></RotateTransform>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#951D8C" Offset="0"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Label Content="REGISTER"
+               FontSize="20"
+               FontWeight="DemiBold"
+               Canvas.Right="30"
+               Canvas.Left="740"
+               Canvas.Top="75">
+
+        </Label>
+
+        <Label Content="LOGIN"
+               FontSize="20"
+               FontWeight="DemiBold"
+               Canvas.Left="897"
+               Canvas.Top="75" >
+
+        </Label>
+
+        <Label Content="ABOUT"
+               FontSize="20"
+               FontWeight="DemiBold"
+               Canvas.Left="1030"
+               Canvas.Top="75" >
+
+        </Label>
+
+        <Label Content="FAQ"
+               FontSize="20"
+               FontWeight="DemiBold"
+               Canvas.Left="1165"
+               Canvas.Top="75" >
+
+        </Label>
+
+        <Label Content="Fully"
+               FontSize="100"
+               FontWeight="Regular"
+               Canvas.Left="740"
+               Canvas.Bottom="390" >
+        </Label>
+
+        <Label Content="COLORED"
+               FontSize="90"
+               FontWeight="Regular"
+               Canvas.Left="740"
+               Canvas.Bottom="290"  >
+        </Label>
+
+        <Label Content="Lorem ipsum doior sit amet consectetur adipiscing elit, sed do" 
+               Canvas.Left="745"
+               Canvas.Bottom="230"
+               
+               >
+
+
+        </Label>
+
+        <Label Content="elusmod tempor incidiaunt ut lobore et dolore mogna aliqua. Ut" 
+               Canvas.Left="745"
+               Canvas.Bottom="205"
+               >
+
+        </Label>
+
+        <Label Content="enim ad minim veniam, quis nostrud." 
+               Canvas.Left="745"
+               Canvas.Bottom="180"
+               >
+
+        </Label>
+
+        <Button Style="{DynamicResource ButtonStyle1}" Height="50"
+                Width="190"
+                Canvas.Left="750"
+                Canvas.Bottom="90"
+                >
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF0059 " Offset="0"></GradientStop>
+                    <GradientStop Color="#FF009E" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Button.Background>
+
+        </Button>
+
+        <Image Source="/icons8-download-67.png"
+               Canvas.Left="770"
+               Canvas.Top="552"
+               Height="33" 
+               Width="31" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+        </Image>
+
+        <Label Content="Download"
+               Canvas.Left="806"
+               Canvas.Top="546"
+               Foreground="White"
+               FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center"
+               >
+
+        </Label>
+
+    </Canvas>
+
+</Window>
