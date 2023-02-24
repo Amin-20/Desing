@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:Desing"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="722" Width="1253" 
-        MaxHeight="722" MaxWidth="1253">
+        Height="679" Width="1253" 
+   
+        ResizeMode="NoResize">
+
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -215,12 +217,12 @@
         </Rectangle>
 
         <Rectangle 
-                Width="250" 
+                Width="280" 
                 Height="107"  
-                Canvas.Left="-73" 
+                Canvas.Left="-96" 
                 Canvas.Bottom="-900"
                 RadiusX="50"
-                RadiusY="50" Canvas.Top="427" HorizontalAlignment="Center" VerticalAlignment="Top"
+                RadiusY="50" Canvas.Top="446" HorizontalAlignment="Left" VerticalAlignment="Top"
                 >
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -242,7 +244,7 @@
                 Canvas.Left="-46" 
                 Canvas.Bottom="-900"
                 RadiusX="50"
-                RadiusY="50" Canvas.Top="119" HorizontalAlignment="Left" VerticalAlignment="Top"
+                RadiusY="50" Canvas.Top="119"
                 >
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -263,7 +265,7 @@
                 Canvas.Left="-87" 
                 Canvas.Bottom="-900"
                 RadiusX="50"
-                RadiusY="50" Canvas.Top="243" HorizontalAlignment="Left" VerticalAlignment="Top"
+                RadiusY="50" Canvas.Top="243"
                 >
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -284,7 +286,7 @@
                 Canvas.Left="299" 
                 Canvas.Bottom="-900"
                 RadiusX="50"
-                RadiusY="50" Canvas.Top="704" HorizontalAlignment="Left" VerticalAlignment="Top"
+                RadiusY="50" Canvas.Top="704" 
                 >
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -306,7 +308,7 @@
                 Canvas.Left="137" 
                 Canvas.Bottom="-900"
                 RadiusX="50"
-                RadiusY="50" Canvas.Top="732" HorizontalAlignment="Left" VerticalAlignment="Top"
+                RadiusY="50" Canvas.Top="732"
                 >
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -328,7 +330,7 @@
                 Canvas.Left="379" 
                 Canvas.Bottom="-900"
                 RadiusX="50"
-                RadiusY="50" Canvas.Top="714" HorizontalAlignment="Left" VerticalAlignment="Top"
+                RadiusY="50" Canvas.Top="714"
                 >
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -349,7 +351,7 @@
                 Canvas.Left="511" 
                 Canvas.Bottom="-900"
                 RadiusX="50"
-                RadiusY="50" Canvas.Top="693" HorizontalAlignment="Left" VerticalAlignment="Top"
+                RadiusY="50" Canvas.Top="693"
                 >
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -370,7 +372,7 @@
                 Canvas.Left="389" 
                 Canvas.Bottom="-900"
                 RadiusX="50"
-                RadiusY="50" Canvas.Top="734" HorizontalAlignment="Left" VerticalAlignment="Top"
+                RadiusY="50" Canvas.Top="734" 
                 >
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -460,7 +462,7 @@
         <Button Style="{DynamicResource ButtonStyle1}" Height="50"
                 Width="190"
                 Canvas.Left="750"
-                Canvas.Bottom="90"
+                Canvas.Bottom="90" HorizontalAlignment="Center" Canvas.Top="523" VerticalAlignment="Top"
                 >
             <Button.Background>
                 <LinearGradientBrush>
@@ -473,17 +475,17 @@
 
         <Image Source="/icons8-download-67.png"
                Canvas.Left="770"
-               Canvas.Top="552"
+               Canvas.Top="531"
                Height="33" 
-               Width="31" >
+               Width="31" HorizontalAlignment="Center" VerticalAlignment="Top" >
 
         </Image>
 
         <Label Content="Download"
                Canvas.Left="806"
-               Canvas.Top="546"
+               Canvas.Top="526"
                Foreground="White"
-               FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center"
+               FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top"
                >
 
         </Label>
