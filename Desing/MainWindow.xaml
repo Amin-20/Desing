@@ -435,7 +435,7 @@
         <Label Content="Lorem ipsum doior sit amet consectetur adipiscing elit, sed do" 
                Canvas.Left="745"
                Canvas.Bottom="230"
-               
+               Foreground="Gray"
                >
 
 
@@ -444,6 +444,7 @@
         <Label Content="elusmod tempor incidiaunt ut lobore et dolore mogna aliqua. Ut" 
                Canvas.Left="745"
                Canvas.Bottom="205"
+               Foreground="Gray"
                >
 
         </Label>
@@ -451,6 +452,7 @@
         <Label Content="enim ad minim veniam, quis nostrud." 
                Canvas.Left="745"
                Canvas.Bottom="180"
+               Foreground="Gray"
                >
 
         </Label>
@@ -473,7 +475,7 @@
                Canvas.Left="770"
                Canvas.Top="552"
                Height="33" 
-               Width="31" HorizontalAlignment="Center" VerticalAlignment="Top">
+               Width="31" >
 
         </Image>
 
